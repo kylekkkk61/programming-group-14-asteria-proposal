@@ -1,0 +1,115 @@
+{
+  "config": {
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "iterations": 400,
+    "learning_rate": 0.06,
+    "auto_class_weights": "SqrtBalanced"
+  },
+  "excluded_from_models": {
+    "CODE_GENDER": "sex (protected characteristic)",
+    "DAYS_BIRTH": "age: no consistent CV gain",
+    "AGE_YEARS": "age: no consistent CV gain",
+    "NAME_FAMILY_STATUS": "family: no consistent CV gain",
+    "CNT_CHILDREN": "family: no consistent CV gain",
+    "CNT_FAM_MEMBERS": "family: no consistent CV gain",
+    "INCOME_PER_PERSON": "family: no consistent CV gain",
+    "NAME_TYPE_SUITE": "family: no consistent CV gain",
+    "OCCUPATION_TYPE": "occupation: sex proxy, no consistent CV gain",
+    "ORGANIZATION_TYPE": "occupation: sex proxy, no consistent CV gain"
+  },
+  "variants": {
+    "all_attributes": 1220,
+    "policy": 1210,
+    "policy_plus_sex": 1211,
+    "policy_plus_age": 1212,
+    "policy_plus_family": 1215,
+    "policy_plus_occupation": 1212,
+    "identity_blind": 1207,
+    "lean": 439,
+    "lean_no_external": 430
+  },
+  "retention_rule": "use a group only if adding it raises mean CV AP and AP in at least 4 of 5 folds; sex is excluded by law regardless",
+  "retention_decisions": {
+    "sex": {
+      "columns": [
+        "CODE_GENDER"
+      ],
+      "fold_ap_gain_from_adding": [
+        0.00418,
+        0.01491,
+        0.00511,
+        0.00993,
+        -0.00769
+      ],
+      "mean_gain": 0.005291202376519316,
+      "folds_better": 4,
+      "would_pass_retention_rule": true,
+      "legal_bar": true
+    },
+    "age": {
+      "columns": [
+        "DAYS_BIRTH",
+        "AGE_YEARS"
+      ],
+      "fold_ap_gain_from_adding": [
+        -0.00293,
+        0.00381,
+        0.004,
+        0.00081,
+        -0.00821
+      ],
+      "mean_gain": -0.0005052572043764136,
+      "folds_better": 3,
+      "would_pass_retention_rule": false,
+      "legal_bar": false
+    },
+    "family": {
+      "columns": [
+        "NAME_FAMILY_STATUS",
+        "CNT_CHILDREN",
+        "CNT_FAM_MEMBERS",
+        "INCOME_PER_PERSON",
+        "NAME_TYPE_SUITE"
+      ],
+      "fold_ap_gain_from_adding": [
+        -0.00485,
+        -0.00946,
+        0.00762,
+        -0.00911,
+        0.00438
+      ],
+      "mean_gain": -0.0022851212038582534,
+      "folds_better": 2,
+      "would_pass_retention_rule": false,
+      "legal_bar": false
+    },
+    "occupation": {
+      "columns": [
+        "OCCUPATION_TYPE",
+        "ORGANIZATION_TYPE"
+      ],
+      "fold_ap_gain_from_adding": [
+        -0.00362,
+        -0.00381,
+        -0.00024,
+        -0.00573,
+        -0.00906
+      ],
+      "mean_gain": -0.004493430531626286,
+      "folds_better": 0,
+      "would_pass_retention_rule": false,
+      "legal_bar": false
+    }
+  },
+  "counterfactual_gender_flip": {
+    "mean_abs_raw_change": 0.038411370374816685,
+    "men_mean_change_if_female": -0.041271180798220584,
+    "women_mean_change_if_male": 0.036943571736200234,
+    "men_leaving_queue_if_female": 164,
+    "women_entering_queue_if_male": 287,
+    "men_in_queue": 513,
+    "women_in_queue": 567
+  },
+  "bootstrap_replicates": 2000
+}

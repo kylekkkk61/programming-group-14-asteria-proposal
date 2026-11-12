@@ -1,0 +1,86 @@
+{
+  "config": {
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "iterations": 400,
+    "learning_rate": 0.06,
+    "auto_class_weights": "None"
+  },
+  "monitoring_only": [
+    "CODE_GENDER"
+  ],
+  "variants": {
+    "with_gender": 1220,
+    "policy": 1219,
+    "policy_minus_age": 1217,
+    "policy_minus_family": 1214,
+    "policy_minus_occupation": 1217,
+    "identity_blind": 1207,
+    "lean": 448,
+    "lean_no_external": 439
+  },
+  "retention_rule": "keep a group only if removing it lowers mean CV AP and AP in at least 4 of 5 folds",
+  "retention_decisions": {
+    "age": {
+      "columns": [
+        "DAYS_BIRTH",
+        "AGE_YEARS"
+      ],
+      "fold_ap_gain_from_keeping": [
+        -0.00239,
+        0.00254,
+        0.00104,
+        -0.01383,
+        0.01304
+      ],
+      "mean_gain": 8.38761259227383e-05,
+      "folds_better": 3,
+      "keep": false
+    },
+    "family": {
+      "columns": [
+        "NAME_FAMILY_STATUS",
+        "CNT_CHILDREN",
+        "CNT_FAM_MEMBERS",
+        "INCOME_PER_PERSON",
+        "NAME_TYPE_SUITE"
+      ],
+      "fold_ap_gain_from_keeping": [
+        -0.01378,
+        0.00307,
+        -0.00279,
+        -0.00513,
+        0.0068
+      ],
+      "mean_gain": -0.002366758980860828,
+      "folds_better": 2,
+      "keep": false
+    },
+    "occupation": {
+      "columns": [
+        "OCCUPATION_TYPE",
+        "ORGANIZATION_TYPE"
+      ],
+      "fold_ap_gain_from_keeping": [
+        -0.00255,
+        0.00531,
+        -0.00902,
+        0.00099,
+        0.00861
+      ],
+      "mean_gain": 0.0006658646577815619,
+      "folds_better": 3,
+      "keep": false
+    }
+  },
+  "counterfactual_gender_flip": {
+    "mean_abs_raw_change": 0.018269043452450187,
+    "men_mean_change_if_female": -0.0198709229380602,
+    "women_mean_change_if_male": 0.017224799711154645,
+    "men_leaving_queue_if_female": 163,
+    "women_entering_queue_if_male": 287,
+    "men_in_queue": 534,
+    "women_in_queue": 546
+  },
+  "bootstrap_replicates": 2000
+}

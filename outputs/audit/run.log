@@ -1,0 +1,166 @@
+all_attributes: 1220 features
+all_attributes candidate 1/1 fold 1/5 AP=0.2504
+all_attributes candidate 1/1 fold 2/5 AP=0.2628
+all_attributes candidate 1/1 fold 3/5 AP=0.2376
+all_attributes candidate 1/1 fold 4/5 AP=0.2634
+all_attributes candidate 1/1 fold 5/5 AP=0.2702
+policy: 1210 features
+policy candidate 1/1 fold 1/5 AP=0.2559
+policy candidate 1/1 fold 2/5 AP=0.2480
+policy candidate 1/1 fold 3/5 AP=0.2349
+policy candidate 1/1 fold 4/5 AP=0.2546
+policy candidate 1/1 fold 5/5 AP=0.2789
+policy_plus_sex: 1211 features
+policy_plus_sex candidate 1/1 fold 1/5 AP=0.2600
+policy_plus_sex candidate 1/1 fold 2/5 AP=0.2629
+policy_plus_sex candidate 1/1 fold 3/5 AP=0.2400
+policy_plus_sex candidate 1/1 fold 4/5 AP=0.2646
+policy_plus_sex candidate 1/1 fold 5/5 AP=0.2712
+policy_plus_age: 1212 features
+policy_plus_age candidate 1/1 fold 1/5 AP=0.2529
+policy_plus_age candidate 1/1 fold 2/5 AP=0.2518
+policy_plus_age candidate 1/1 fold 3/5 AP=0.2389
+policy_plus_age candidate 1/1 fold 4/5 AP=0.2554
+policy_plus_age candidate 1/1 fold 5/5 AP=0.2707
+policy_plus_family: 1215 features
+policy_plus_family candidate 1/1 fold 1/5 AP=0.2510
+policy_plus_family candidate 1/1 fold 2/5 AP=0.2386
+policy_plus_family candidate 1/1 fold 3/5 AP=0.2425
+policy_plus_family candidate 1/1 fold 4/5 AP=0.2455
+policy_plus_family candidate 1/1 fold 5/5 AP=0.2833
+policy_plus_occupation: 1212 features
+policy_plus_occupation candidate 1/1 fold 1/5 AP=0.2522
+policy_plus_occupation candidate 1/1 fold 2/5 AP=0.2442
+policy_plus_occupation candidate 1/1 fold 3/5 AP=0.2346
+policy_plus_occupation candidate 1/1 fold 4/5 AP=0.2489
+policy_plus_occupation candidate 1/1 fold 5/5 AP=0.2699
+identity_blind: 1207 features
+identity_blind candidate 1/1 fold 1/5 AP=0.2565
+identity_blind candidate 1/1 fold 2/5 AP=0.2367
+identity_blind candidate 1/1 fold 3/5 AP=0.2346
+identity_blind candidate 1/1 fold 4/5 AP=0.2605
+identity_blind candidate 1/1 fold 5/5 AP=0.2700
+lean: 439 features
+lean candidate 1/1 fold 1/5 AP=0.2395
+lean candidate 1/1 fold 2/5 AP=0.2489
+lean candidate 1/1 fold 3/5 AP=0.2292
+lean candidate 1/1 fold 4/5 AP=0.2530
+lean candidate 1/1 fold 5/5 AP=0.2700
+lean_no_external: 430 features
+lean_no_external candidate 1/1 fold 1/5 AP=0.1674
+lean_no_external candidate 1/1 fold 2/5 AP=0.2129
+lean_no_external candidate 1/1 fold 3/5 AP=0.1739
+lean_no_external candidate 1/1 fold 4/5 AP=0.1994
+lean_no_external candidate 1/1 fold 5/5 AP=0.2054
+                 model  features  cv_mean_ap  cv_sd_ap  pr_auc_ap  roc_auc  brier  top10_cases  top20_cases  top30_cases  queue_rate_gap  recall_gap  fpr_gap
+        all_attributes      1220      0.2569    0.0129     0.2847   0.7721 0.0666          151          232          286          0.1320      0.1980   0.1110
+                policy      1210      0.2545    0.0160     0.2747   0.7695 0.0670          144          222          283          0.0542      0.0904   0.0368
+       policy_plus_sex      1211      0.2597    0.0118     0.2734   0.7701 0.0670          147          229          289          0.1229      0.1360   0.1074
+       policy_plus_age      1212      0.2540    0.0114     0.2741   0.7678 0.0671          145          223          289          0.0525      0.0677   0.0371
+    policy_plus_family      1215      0.2522    0.0180     0.2693   0.7637 0.0674          140          217          281          0.0500      0.0459   0.0371
+policy_plus_occupation      1212      0.2500    0.0129     0.2826   0.7715 0.0668          145          223          297          0.0533      0.0677   0.0380
+        identity_blind      1207      0.2517    0.0154     0.2649   0.7634 0.0674          145          216          284          0.0566      0.0408   0.0450
+                  lean       439      0.2481    0.0153     0.2716   0.7680 0.0672          143          226          292          0.0575      0.0554   0.0435
+      lean_no_external       430      0.1918    0.0200     0.2079   0.7118 0.0700          125          197          255          0.0260      0.1283   0.0046
+{
+ "sex": {
+  "columns": [
+   "CODE_GENDER"
+  ],
+  "fold_ap_gain_from_adding": [
+   0.00418,
+   0.01491,
+   0.00511,
+   0.00993,
+   -0.00769
+  ],
+  "mean_gain": 0.005291202376519316,
+  "folds_better": 4,
+  "would_pass_retention_rule": true,
+  "legal_bar": true
+ },
+ "age": {
+  "columns": [
+   "DAYS_BIRTH",
+   "AGE_YEARS"
+  ],
+  "fold_ap_gain_from_adding": [
+   -0.00293,
+   0.00381,
+   0.004,
+   0.00081,
+   -0.00821
+  ],
+  "mean_gain": -0.0005052572043764136,
+  "folds_better": 3,
+  "would_pass_retention_rule": false,
+  "legal_bar": false
+ },
+ "family": {
+  "columns": [
+   "NAME_FAMILY_STATUS",
+   "CNT_CHILDREN",
+   "CNT_FAM_MEMBERS",
+   "INCOME_PER_PERSON",
+   "NAME_TYPE_SUITE"
+  ],
+  "fold_ap_gain_from_adding": [
+   -0.00485,
+   -0.00946,
+   0.00762,
+   -0.00911,
+   0.00438
+  ],
+  "mean_gain": -0.0022851212038582534,
+  "folds_better": 2,
+  "would_pass_retention_rule": false,
+  "legal_bar": false
+ },
+ "occupation": {
+  "columns": [
+   "OCCUPATION_TYPE",
+   "ORGANIZATION_TYPE"
+  ],
+  "fold_ap_gain_from_adding": [
+   -0.00362,
+   -0.00381,
+   -0.00024,
+   -0.00573,
+   -0.00906
+  ],
+  "mean_gain": -0.004493430531626286,
+  "folds_better": 0,
+  "would_pass_retention_rule": false,
+  "legal_bar": false
+ }
+}
+           feature_set  gender_prediction_auc                                                                                                 top_predictors
+policy_plus_occupation               0.874768 OCCUPATION_TYPE (20.7); ORGANIZATION_TYPE (6.7); EXT_SOURCE_1 (5.9); OWN_CAR_AGE (4.9); AMT_INCOME_TOTAL (3.9)
+                policy               0.795152       EXT_SOURCE_1 (8.6); OWN_CAR_AGE (7.2); AMT_INCOME_TOTAL (5.4); FLAG_OWN_CAR (3.7); DAYS_ID_PUBLISH (3.5)
+        identity_blind               0.792710       EXT_SOURCE_1 (8.8); OWN_CAR_AGE (6.6); AMT_INCOME_TOTAL (4.9); FLAG_OWN_CAR (4.6); FLAG_DOCUMENT_8 (3.6)
+{
+ "mean_abs_raw_change": 0.038411370374816685,
+ "men_mean_change_if_female": -0.041271180798220584,
+ "women_mean_change_if_male": 0.036943571736200234,
+ "men_leaving_queue_if_female": 164,
+ "women_entering_queue_if_male": 287,
+ "men_in_queue": 513,
+ "women_in_queue": 567
+}
+                              model       metric  estimate_mean  ci95_low  ci95_high
+        policy minus all_attributes           ap        -0.0099   -0.0248     0.0048
+        policy minus all_attributes top20_recall        -0.0244   -0.0501     0.0022
+       policy minus policy_plus_sex           ap         0.0012   -0.0130     0.0153
+       policy minus policy_plus_sex top20_recall        -0.0172   -0.0433     0.0092
+       policy minus policy_plus_age           ap         0.0004   -0.0133     0.0134
+       policy minus policy_plus_age top20_recall        -0.0048   -0.0340     0.0239
+    policy minus policy_plus_family           ap         0.0054   -0.0071     0.0177
+    policy minus policy_plus_family top20_recall         0.0092   -0.0170     0.0360
+policy minus policy_plus_occupation           ap        -0.0076   -0.0203     0.0060
+policy minus policy_plus_occupation top20_recall        -0.0046   -0.0295     0.0192
+        policy minus identity_blind           ap         0.0093   -0.0030     0.0219
+        policy minus identity_blind top20_recall         0.0116   -0.0134     0.0369
+                  policy minus lean           ap         0.0029   -0.0163     0.0215
+                  policy minus lean top20_recall        -0.0118   -0.0471     0.0211
+      policy minus lean_no_external           ap         0.0659    0.0383     0.0940
+      policy minus lean_no_external top20_recall         0.0579    0.0142     0.0993
