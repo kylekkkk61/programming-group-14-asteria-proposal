@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "split": "development",
+      "checked_instalments": 970946,
+      "exactly_settled_instalments": 958102,
+      "mismatches": 0,
+      "oracle": "fractions.Fraction from original CSV strings"
+    },
+    {
+      "split": "evaluation",
+      "checked_instalments": 107544,
+      "exactly_settled_instalments": 105826,
+      "mismatches": 0,
+      "oracle": "fractions.Fraction from original CSV strings"
+    }
+  ]
+}

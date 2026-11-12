@@ -1,0 +1,58 @@
+{
+  "seed": 2026,
+  "python": "3.12.14",
+  "elapsed_seconds": 547.5486350000137,
+  "arguments": {
+    "data": "asteria_student_data",
+    "output": "outputs",
+    "iterations": 400,
+    "threads": 4
+  },
+  "rows": {
+    "development": 27000,
+    "evaluation": 3000,
+    "fit": 16200,
+    "calibration": 5400,
+    "holdout": 5400
+  },
+  "full_features": 1210,
+  "lean_features": 439,
+  "positive_rate": 0.08074074074074074,
+  "excluded_from_models": {
+    "CODE_GENDER": "sex (protected characteristic)",
+    "DAYS_BIRTH": "age: no consistent CV gain",
+    "AGE_YEARS": "age: no consistent CV gain",
+    "NAME_FAMILY_STATUS": "family: no consistent CV gain",
+    "CNT_CHILDREN": "family: no consistent CV gain",
+    "CNT_FAM_MEMBERS": "family: no consistent CV gain",
+    "INCOME_PER_PERSON": "family: no consistent CV gain",
+    "NAME_TYPE_SUITE": "family: no consistent CV gain",
+    "OCCUPATION_TYPE": "occupation: sex proxy, no consistent CV gain",
+    "ORGANIZATION_TYPE": "occupation: sex proxy, no consistent CV gain"
+  },
+  "final_model": "catboost_full",
+  "refit_on_holdout": false,
+  "thresholds": {
+    "logistic_full": 0.08446973519973197,
+    "catboost_full": 0.08583658732305634,
+    "catboost_lean": 0.0746134273167341
+  },
+  "input_sha256": {
+    "data_dictionary.csv": "d7c69da71df36dcc8b2cc58c5563eb68809fef0a39a584dd7a9c23bbef32ff3a",
+    "development dataset/credit_card_balance.csv": "07215cfb8a0ac187d5ca55e80f0295e15bf0f5ceb981d7d811f95a7dea9fc365",
+    "development dataset/external_account_history.csv": "4ea4fd063f351a38ff4c29256b7daa2e9768451caad268f828d2f4113b3200e8",
+    "development dataset/external_credit_accounts.csv": "8b61c8b69c064fd1686c4317af7cae0c3fab709b18180f2ada9a14d2fd082d15",
+    "development dataset/instalment_payments.csv": "afa4d19611a1dc842bed075493a7c49b682ffd2a052f10775d3d6135d6a29f1b",
+    "development dataset/loan_applications.csv": "1c11392bfe66b1afa4d6ff3e649b5594a53ee94fc9d12d95ca4e21a7547121c3",
+    "development dataset/pos_cash_balance.csv": "62d3205af23db4fa481ca4d6824375c9981b96839e9e48000007d69604029226",
+    "development dataset/previous_loan_applications.csv": "d497ebcda9d89fd09b134e1ec5cb7dc6d93ccff39caa9b896b272725c97ced4a",
+    "evaluation dataset/credit_card_balance.csv": "a90fe40a569fcb108d2ca906ad53537a549a4d06bee3b83f45e811f39bd529ef",
+    "evaluation dataset/external_account_history.csv": "ef5add978c2ad478d1757eb5d9d892365ec09bdaac5d32574b59f7117b0dfe63",
+    "evaluation dataset/external_credit_accounts.csv": "fc515b12dcf22855fb98d9b2880485ff51e6594a6c756748e6ac8f57aff88b16",
+    "evaluation dataset/instalment_payments.csv": "d3745a774931f60b0183db0698c95b37dfdcbb8c7ee24ee962e7c11ffd7cc991",
+    "evaluation dataset/new_loan_applications.csv": "443c4b86bea5f221bd31f9afa5249cc4b105c065ebadee4f30cefb228823f64b",
+    "evaluation dataset/pos_cash_balance.csv": "2994c6ebf97ca07fe20318a42a31fb9407a7be6a09546d97b1b2cf46baa2af64",
+    "evaluation dataset/previous_loan_applications.csv": "2e23630271a0642ebb1f2288b0d99b45012f6b1e8301f3e02d723a2435ed09f5",
+    "prediction_template.csv": "7925fadb198e54f5292d22d951988b8733ced837a393eb68f32dab698400007e"
+  }
+}

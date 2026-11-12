@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "evaluation_features_rebuilt": 3000,
+  "prediction_rows_exactly_reproduced": 3000,
+  "holdout_rows": 5400,
+  "cv_fits_checked": 45,
+  "checks": [
+    "schema",
+    "unique IDs",
+    "template order",
+    "binary labels",
+    "no monitoring-only attributes in models",
+    "saved-model probabilities",
+    "exact review capacity",
+    "disjoint partitions",
+    "holdout labels",
+    "all five folds"
+  ]
+}

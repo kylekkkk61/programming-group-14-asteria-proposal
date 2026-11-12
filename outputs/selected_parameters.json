@@ -1,0 +1,20 @@
+{
+  "logistic_full": {
+    "C": 0.01,
+    "class_weight": null
+  },
+  "catboost_full": {
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "iterations": 400,
+    "learning_rate": 0.06,
+    "auto_class_weights": "SqrtBalanced"
+  },
+  "catboost_lean": {
+    "depth": 4,
+    "l2_leaf_reg": 5,
+    "iterations": 400,
+    "learning_rate": 0.06,
+    "auto_class_weights": "SqrtBalanced"
+  }
+}
