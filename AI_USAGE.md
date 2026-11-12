@@ -1,0 +1,11 @@
+# AI use record for the technical work
+
+This is a factual preparation record, not a declaration of student ownership or a submitted assessment statement.
+
+- **Why:** To implement and verify the approved Member A+B technical workflow and produce reproducible evidence for the group.
+- **What:** The assistant read the supplied assignment and referenced proposal, inspected the original data and dictionary, wrote the data engineering and modelling pipeline, regression checks and documentation, executed local training/evaluation, and generated prediction and analysis outputs.
+- **Which:** The OpenAI Codex desktop app, across several sessions that used more than one underlying model. Confirm product and model names from the session records before writing the submitted declaration.
+- **Directly generated material:** `pipeline.py`, `src/features.py`, `src/modelling.py`, `src/reporting.py`, `tests/test_pipeline.py`, `tests/check_instalment_precision.py`, `verify_outputs.py`, `audit.py`, README and results documentation, `outputs/audit/AUDIT.md`, and the working drafts `outputs/MEMBER_C_BUSINESS_STRATEGY.md`, `outputs/MEMBER_D_RISK_AND_RESPONSIBLE_AI.md` and `outputs/MEMBER_E_TECHNICAL_REPORT.md`. Tables, models, figures and predictions were computed by this AI-authored code using the supplied data. The legal sources in the audit were read by the assistant on legislation.gov.uk, ico.org.uk and fca.org.uk through a browser. The C/D/E drafts were shaped by decisions the group lead made in discussion (review strategy, operating points, data scope and the personal-attribute policy), and still need review and editing by the responsible members.
+- **Human review still required before submission:** Verify the final code and interpretation, record any subsequent human changes, state accurately which generated material is used in the submitted work, and confirm intellectual ownership only if the group can explain and defend it. The assistant cannot make this confirmation on the students' behalf.
+
+Retain this chat and the run manifest as supporting records. The assessment requires WHY, WHAT, WHICH AI, and where generated content is used; the declaration is outside its report word count.
