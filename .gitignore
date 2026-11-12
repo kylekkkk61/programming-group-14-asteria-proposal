@@ -1,11 +1,10 @@
-# Course materials: not ours to redistribute (the group list also holds personal data)
+# Course materials: kept out of the repository
 IB99Z0-Group-Assignment.pdf
 IB99Z0-Group-Assignment_CN.pdf
 IB99Z0-Group-List.pdf
 Week-4-ML-Methodology-stu.pdf
 
-# Course dataset: the assignment says not to submit it; keep it local
-asteria_student_data/
+# Duplicate of asteria_student_data/, which is tracked
 asteria_student_data.zip
 
 # Local environment and caches
@@ -17,16 +16,3 @@ __pycache__/
 # Superseded local results and extra reproduction runs
 _archive/
 outputs_reproduced/
-
-# Per-applicant outputs derived from the course data, and model files.
-# pipeline.py and audit.py rebuild all of them from the raw data.
-outputs/*.parquet
-outputs/*.joblib
-outputs/*.cbm
-outputs/holdout_*.csv
-outputs/partitions.csv
-outputs/evaluation_risk_scores.csv
-outputs/audit/holdout_*.csv
-
-# Assignment submission file: kept out of the shared repository
-outputs/predictions.csv

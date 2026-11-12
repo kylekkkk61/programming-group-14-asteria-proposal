@@ -48,10 +48,10 @@ With uv, use `uv venv .venv --python 3.12` and `uv pip install --python .venv/bi
 | `outputs/MEMBER_D_RISK_AND_RESPONSIBLE_AI.md` | Risk interpretation and responsible-lending working draft (Member D) |
 | `outputs/MEMBER_E_TECHNICAL_REPORT.md` | Technical report working draft (Member E) |
 | `outputs/audit/` | Audit report (`AUDIT.md`) with checked legal sources, metrics, group results and per-applicant holdout scores |
-| `outputs/predictions.csv` † | The two-column binary predictions required by the assignment |
-| `outputs/evaluation_risk_scores.csv` † | Calibrated probabilities, loan amount, both rankings and Top 10/20/30% flags |
-| `outputs/development_features.parquet` † | Development features indexed by applicant ID, plus TARGET |
-| `outputs/evaluation_features.parquet` † | Evaluation features with the same schema, without TARGET |
+| `outputs/predictions.csv` | The two-column binary predictions required by the assignment |
+| `outputs/evaluation_risk_scores.csv` | Calibrated probabilities, loan amount, both rankings and Top 10/20/30% flags |
+| `outputs/development_features.parquet` | Development features indexed by applicant ID, plus TARGET |
+| `outputs/evaluation_features.parquet` | Evaluation features with the same schema, without TARGET |
 | `outputs/feature_dictionary.csv` | Source, definition and Lean membership of every feature |
 | `outputs/data_quality.csv` | Row counts, duplicates, missing parent links and date exclusions |
 | `outputs/raw_column_profile.csv` | Type, missing rate and distinct count of every raw column |
@@ -59,17 +59,17 @@ With uv, use `uv venv .venv --python 3.12` and `uv pip install --python .venv/bi
 | `outputs/cross_validation.csv` | Score and time per candidate and fold (tuning evidence, not test scores) |
 | `outputs/metrics.csv` | Raw/calibrated probabilities, 0.5/F2 thresholds and holdout results |
 | `outputs/review_strategies.csv` | Recall, precision, lift and credit coverage at each review capacity |
-| `outputs/holdout_*.csv` † | Per-applicant holdout predictions for tracing false positives and negatives |
+| `outputs/holdout_*.csv` | Per-applicant holdout predictions for tracing false positives and negatives |
 | `outputs/subgroup_diagnostics.csv` | Descriptive results by gender and income type for Member D |
-| `outputs/shap_*.csv`, `outputs/shap_values.parquet` † | SHAP ranking, source summary and per-applicant explanations |
+| `outputs/shap_*.csv`, `outputs/shap_values.parquet` | SHAP ranking, source summary and per-applicant explanations |
 | `outputs/logistic_coefficients.csv` | Logistic Regression coefficients on standardised numeric and one-hot features |
 | `outputs/figures/` | English figures ready for the slides and report |
-| `outputs/*.joblib` † | Model, calibrator, columns and threshold; only load files you trust |
+| `outputs/*.joblib` | Model, calibrator, columns and threshold; only load files you trust |
 | `outputs/run_manifest.json` | Parameters, seed, input SHA-256 hashes, row counts, run time and thresholds |
-| `outputs/partitions.csv` † | The fit/calibration/holdout partition of each applicant |
+| `outputs/partitions.csv` | The fit/calibration/holdout partition of each applicant |
 | `AI_USAGE.md` | Factual record of AI use and the items the group must confirm before submission |
 
-† Produced by `pipeline.py` but not stored in the Git repository: these files hold per-applicant data derived from the course dataset, or model files that the code rebuilds. Run the pipeline locally to create them. (`outputs/shap_importance.csv` and `outputs/shap_by_source.csv` are stored.)
+The repository includes the course dataset (`asteria_student_data/`) and every generated output, so the group can work from one download. The course PDFs are kept out.
 
 ## Data processing decisions
 
@@ -123,4 +123,4 @@ Do not package the raw `asteria_student_data/`, the original ZIP, `.venv/`, the 
 
 ## Revision history
 
-The results were revised twice after independent review: a fix to decimal instalment arithmetic, and the personal-attribute policy described above. `outputs/CORRECTION_REPORT.md` records what changed and the before/after results. Earlier outputs are not kept in the repository.
+The results were revised twice after independent review: a fix to decimal instalment arithmetic, and the personal-attribute policy described above. `outputs/CORRECTION_REPORT.md` records what changed and the before/after results. Superseded outputs are not kept in the repository.
