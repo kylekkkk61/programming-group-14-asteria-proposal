@@ -1,5 +1,7 @@
 # Asteria Finance: Member A+B technical delivery
 
+Group members: start with `PROJECT_OVERVIEW.md`.
+
 This project implements **Member A (data engineering)** and **Member B (modelling and validation)** from the confirmed group proposal. It covers all seven tables, an L2 Logistic Regression benchmark, CatBoost, five-fold stratified cross-validation, probability calibration, SHAP, the Full/Lean comparison, review-capacity analysis and `predictions.csv`. The original CSV files are never modified.
 
 ## Running the project
@@ -36,6 +38,7 @@ With uv, use `uv venv .venv --python 3.12` and `uv pip install --python .venv/bi
 
 | File | Purpose |
 |---|---|
+| `PROJECT_OVERVIEW.md` | Start here: the project, every decision and its reasons, results, business strategy, next steps, and the data processing in detail |
 | `pipeline.py` | End-to-end entry point from the seven raw CSVs to the final predictions |
 | `src/features.py` | Key checks, cleaning, split-payment consolidation and applicant-level features |
 | `src/modelling.py` | Models, five-fold tuning, calibration, classification threshold and review metrics |
