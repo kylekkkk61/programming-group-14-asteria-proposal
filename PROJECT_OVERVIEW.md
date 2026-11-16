@@ -116,6 +116,7 @@ The key decisions, each made in the group discussion:
 |---|---|---|
 | `PROJECT_OVERVIEW.md` | This document | Everyone |
 | `outputs/MEMBER_C_BUSINESS_STRATEGY.md` | Business case, strategy comparison, operating points, data choice, scenario, pilot, claims to avoid | C, F, G |
+| `contributions/Member_C_Business_Strategy_Weijie_Li.docx` | Member C's own business strategy write-up (internal alignment, not for submission) | Everyone |
 | `outputs/MEMBER_D_RISK_AND_RESPONSIBLE_AI.md` | Risk drivers, error analysis, legal position, fairness results, deployment recommendations | D, F, G |
 | `outputs/MEMBER_E_TECHNICAL_REPORT.md` | Report body draft, figure list, AI declaration template | E |
 | `outputs/audit/AUDIT.md` | Personal-attribute tests and checked legal sources | D, E |
